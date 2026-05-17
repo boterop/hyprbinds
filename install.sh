@@ -13,7 +13,7 @@ if ! ls | grep -q "scripts"; then
   SCRIPT_DIR="/tmp/hyprbinds/scripts"
 fi
 
-cp SCRIPT_DIR/* ~/.config/hypr/scripts/
+cp $SCRIPT_DIR/* ~/.config/hypr/scripts/
 chmod +x ~/.config/hypr/scripts/hyprbinds.sh
 
 if ! grep -q "hyprbinds.sh" ~/.config/hypr/hyprland.conf; then
