@@ -31,13 +31,10 @@ sudo pacman -S rofi
 
 ---
 
-## Clone the repository
+## hyprbinds
 
 ```bash
-git clone https://github.com/boterop/hyprbinds
-cd hyprbinds
-chmod +x install.sh
-./install.sh
+curl -fsS https://raw.githubusercontent.com/boterop/hyprbinds/refs/heads/main/install.sh | sh
 ```
 
 This will:
