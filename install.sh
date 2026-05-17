@@ -6,6 +6,7 @@ mkdir -p ~/.config/hypr/scripts
 
 SCRIPT_DIR="scripts"
 CLEAN=false
+MAIN_MOD="\$mainMod"
 
 if ! ls | grep -q "scripts"; then
   echo "Downloading scripts"
@@ -16,15 +17,19 @@ fi
 cp $SCRIPT_DIR/* ~/.config/hypr/scripts/
 chmod +x ~/.config/hypr/scripts/hyprbinds.sh
 
+if ! grep -q "\$mainMod" ~/.config/hypr/hyprland.conf; then
+  MAIN_MOD="SUPER"
+fi
+
 if ! grep -q "hyprbinds.sh" ~/.config/hypr/hyprland.conf; then
   echo '' >>~/.config/hypr/hyprland.conf
   echo '# hyprbinds - script' >>~/.config/hypr/hyprland.conf
-  echo 'bind = $mainMod, K, exec, ~/.config/hypr/scripts/hyprbinds.sh' >>~/.config/hypr/hyprland.conf
+  echo "bind = $MAIN_MOD, K, exec, ~/.config/hypr/scripts/hyprbinds.sh" >>~/.config/hypr/hyprland.conf
 fi
 
 hyprctl reload
 
-if CLEAN; then
+if $CLEAN; then
   echo "Cleaning up"
   rm -rf /tmp/hyprbinds
 fi
