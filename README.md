@@ -4,7 +4,7 @@ Minimal Rofi-powered keybind cheatsheet for Hyprland.
 
 Automatically parses your `hyprland.conf` and displays all keybinds in a clean searchable popup.
 
-![hyprbinds preview](assets/preview.jgp)
+![hyprbinds preview](assets/preview.jpg)
 
 ---
 
