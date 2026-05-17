@@ -29,7 +29,7 @@ fi
 
 hyprctl reload
 
-if $CLEAN; then
+if [ "$CLEAN" = true ]; then
   echo "Cleaning up"
   rm -rf /tmp/hyprbinds
 fi
