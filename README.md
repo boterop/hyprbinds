@@ -19,12 +19,6 @@ Automatically parses your `hyprland.conf` and displays all keybinds in a clean s
 
 ---
 
-## Preview
-
-Displays all your Hyprland binds in a searchable Rofi popup.
-
----
-
 # Installation
 
 ## Dependencies
